@@ -16,6 +16,6 @@ const Textarea = (props, ref) => {
 	);
 };
 
-let TextareaRef = React.forwardRef(Textarea);
+const TextareaRef = React.forwardRef(Textarea);
 
 export default TextareaRef;
