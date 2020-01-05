@@ -12,7 +12,7 @@ export default () => {
 		startGame,
 		count,
 		handleChange
-	} = useLogic(10);
+	} = useLogic(5);
 
 	return (
 		<div className='App'>
@@ -33,7 +33,9 @@ export default () => {
 						<button onClick={startGame}>Start</button>
 					</div>
 					<div className='five columns'>
-						<p>Time remaing: {count} seconds</p>
+						<p>
+							Time remaing: {count} {count > 1 ? 'seconds' : 'second'}
+						</p>
 					</div>
 					<div className='five columns'>
 						<p>Word count: {countText}</p>
