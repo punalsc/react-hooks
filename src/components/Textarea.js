@@ -4,7 +4,7 @@ const Textarea = (props, ref) => {
 	const { className, placeholder, onChange, disabled, value } = props;
 	return (
 		<textarea
-			//ref={ref}
+			ref={ref}
 			className={className}
 			placeholder={placeholder}
 			id='exampleMessage'
