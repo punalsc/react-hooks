@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 
-export default () => {
-	const seconds = 5;
+export default seconds => {
 	const [count, setCount] = useState(seconds);
 	const [text, setText] = useState('');
 	const [countText, setCountText] = useState(0);

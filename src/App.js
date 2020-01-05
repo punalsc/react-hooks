@@ -12,7 +12,7 @@ export default () => {
 		startGame,
 		count,
 		handleChange
-	} = useLogic();
+	} = useLogic(10);
 
 	return (
 		<div className='App'>
