@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Textarea from './components/Textarea';
 
-export default App;
+export default () => {
+	return (
+		<div className='App'>
+			<div className='container'>
+				<section>
+					<h1 class='title'>Speed typing game</h1>
+					<Textarea className='u-full-width' />
+				</section>
+				<hr />
+				<div className='row untils'>
+					<div class='two columns'>
+						<button>Start</button>
+					</div>
+					<div class='five columns'>
+						<p>Time remaing: 5 seconds</p>
+					</div>
+					<div class='five columns'>
+						<p>Word count: 5 seconds</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};

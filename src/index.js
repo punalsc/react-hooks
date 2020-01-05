@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import 'react-skeleton-css/styles/skeleton.2.0.4.css';
+// normalize is also available
+import 'react-skeleton-css/styles/normalize.3.0.2.css';
+
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
