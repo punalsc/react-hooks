@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import useLogic from './useLogic';
+import TextareaRef from './components/Textarea';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default () => {
+	const {
+		text,
+		disabled,
+		countText,
+		textAreaRef,
+		startGame,
+		count,
+		handleChange
+	} = useLogic(5);
 
-export default App;
+	return (
+		<div className='App'>
+			<div className='container'>
+				<section>
+					<h1 className='title'>Speed typing game</h1>
+					<TextareaRef
+						onChange={e => handleChange(e, text)}
+						value={text}
+						className='u-full-width'
+						disabled={disabled}
+						ref={textAreaRef}
+					/>
+				</section>
+				<hr />
+				<div className='row untils'>
+					<div className='two columns'>
+						<button onClick={startGame}>Start</button>
+					</div>
+					<div className='five columns'>
+						<p>
+							Time remaing: {count} {count > 1 ? 'seconds' : 'second'}
+						</p>
+					</div>
+					<div className='five columns'>
+						<p>Word count: {countText}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
